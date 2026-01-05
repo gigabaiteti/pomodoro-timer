@@ -1,0 +1,80 @@
+:root {
+    --bs-primary: #ff6b6b; /* Foco padrão */
+    --bs-secondary: #4ecdc4; /* Pausa padrão */
+    --bs-btn-bg: var(--bs-primary);
+}
+
+/* Sobrescreve classes do Bootstrap com nossas cores personalizadas se necessário,
+   mas preferimos deixar o Bootstrap cuidar da maioria e apenas ajustar as variáveis globais */
+
+body.break-mode {
+    --bs-primary: #4ecdc4;
+    --bs-secondary: #ff6b6b;
+}
+
+/* Transições suaves para mudança de cor */
+body, .btn, .text-primary, .bg-secondary, .timer-container, .mode-container {
+    transition: all 0.5s ease;
+}
+
+/* Ajustes Específicos que o Bootstrap não cobre ou queremos customizar */
+
+/* Remove borda do foco em inputs para manter minimalista se desejar, 
+   ou deixe o padrão do Bootstrap (ring) */
+
+/* Tema de Pausa: Ajuste dinâmico de componentes que usam cores primárias */
+body.break-mode .text-primary {
+    color: var(--bs-primary) !important;
+}
+
+body.break-mode .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+body.break-mode .btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+body.break-mode .btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+/* Badge Mode Indicator */
+#mode-indicator {
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Timer Container Border in Break Mode */
+body.break-mode .timer-container {
+    border-color: var(--bs-primary) !important;
+}
+
+body.break-mode .mode-container {
+    border-color: var(--bs-primary) !important;
+}
+
+body.break-mode #mode-indicator {
+    color: var(--bs-primary) !important;
+}
+
+/* Scrollbar Customization for History List */
+#history-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#history-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+#history-list::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 3px;
+}
+
+#history-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+}
