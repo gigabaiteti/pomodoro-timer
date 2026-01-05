@@ -28,8 +28,8 @@ Pomodoro Timer para implementação do Método Pomodoro baseado em HTML, CSS e J
 ## Tecnologias
 
 - HTML5, CSS3, JavaScript (ES6+)
-- Bootstrap 5 (layout e modais)
-- FontAwesome 6 Free (ícones)
+- Bootstrap 5.3.2 (layout e modais)
+- FontAwesome v7.0.1 Free (ícones)
 - Web Audio API (alarme)
 - LocalStorage (persistência)
 - Pronto para uso como Progressive Web Application (PWA)
